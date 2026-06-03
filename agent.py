@@ -28,7 +28,6 @@ async def main():
     )
     
     mcp_tools = await client.get_tools()
-    print(f"Available tools: {mcp_tools}")
     local_model = ChatOllama(model="qwen2.5:7b", temperature=0.7)
     async def run_agent(user_prompt: str, tools_list: list):
         agent = create_agent(
